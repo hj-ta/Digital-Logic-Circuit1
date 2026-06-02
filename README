@@ -1,0 +1,118 @@
+# Digital Logic Circuit 1
+
+디지털논리회로1 과제와 실습 내용을 정리한 저장소이다.
+
+이 저장소는 Boolean Algebra, Number System, Combinational Logic Circuit, Sequential Logic Circuit, Quine-McCluskey Algorithm, Verilog HDL 기반 회로 구현 내용을 포함한다.
+
+---
+
+## Contents
+
+| Folder                    | Topic                            | Description                                                                                         |
+| ------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `HW01_Boolean_Algebra`    | Boolean Algebra & Number Systems | Truth Table, Two's Complement, Hexadecimal Addition, Boolean Equation Simplification, CMOS Logic 분석 |
+| `HW02_Quine_McCluskey`    | Quine-McCluskey Algorithm        | C++ 기반 Boolean Function Minimization 구현                                                             |
+| `HW03_Sequential_Logic`   | Sequential Logic & FSM           | Latch, Flip-Flop, State Diagram, State Transition Table, Moore/Mealy Machine 분석                     |
+| `HW04_Ripple_Carry_Adder` | 40-bit Ripple Carry Adder        | Verilog HDL 기반 40-bit Ripple Carry Adder 구현 및 Testbench 검증                                          |
+
+---
+
+## Main Topics
+
+### Boolean Algebra & Logic Design
+
+Digital Logic Circuit의 기본 개념인 Boolean Algebra와 Boolean Equation Simplification을 다룬 과제이다.
+
+주요 내용은 다음과 같다.
+
+* Truth Table과 Boolean Function
+* Two's Complement 표현
+* Overflow 판별
+* Hexadecimal Addition
+* Boolean Equation Simplification
+* Combinational Logic Circuit 설계
+* Majority Gate 분석
+* CMOS Logic 분석
+* Inverter의 Logic Level 및 Noise Margin 분석
+
+---
+
+### Quine-McCluskey Algorithm
+
+Quine-McCluskey Algorithm은 Boolean Function을 체계적으로 최소화하기 위한 tabular method이다.
+
+해당 과제에서는 C++를 사용하여 minterm을 입력받고, 항들을 bit pattern 기준으로 grouping한 뒤, 한 bit 차이의 항들을 반복적으로 결합하여 Prime Implicant를 생성하는 과정을 구현하였다.
+
+구현 과정에서 중점적으로 다룬 내용은 다음과 같다.
+
+* 파일 기반 minterm 입력 처리
+* bit pattern 기반 grouping
+* single-bit difference 검출
+* `-` 기호를 활용한 implicant 표현
+* Prime Implicant 생성
+* coverage 검사
+* Essential Prime Implicant 선택
+* 100-bit 대형 input test
+
+---
+
+### Sequential Logic & FSM
+
+Sequential Logic Circuit은 현재 input뿐 아니라 이전 state에 따라 output이 결정되는 회로이다.
+
+해당 과제에서는 Latch, Flip-Flop, FSM을 중심으로 state 저장과 state transition 개념을 정리하였다.
+
+주요 내용은 다음과 같다.
+
+* SR Latch 동작 분석
+* Flip-Flop 구조 이해
+* State Diagram 작성
+* State Transition Table 작성
+* Moore Machine / Mealy Machine 비교
+* Sequence Detector 설계
+* Ring Counter 분석
+
+---
+
+### Verilog HDL Circuit Implementation
+
+40-bit Ripple Carry Adder를 Verilog HDL로 구현하고, Testbench를 통해 동작을 검증한 과제이다.
+
+Ripple Carry Adder는 여러 개의 Full Adder를 직렬로 연결하여 다중 bit addition을 수행하는 구조이다. 각 bit에서 발생한 Carry-out이 다음 bit의 Carry-in으로 전달되며, carry가 하위 bit에서 상위 bit로 순차적으로 전파된다.
+
+해당 과제에서는 다음 과정을 수행하였다.
+
+* Full Adder Truth Table 작성
+* Sum / Carry-out Boolean Equation 도출
+* 1-bit Full Adder module 구현
+* 40-bit Ripple Carry Adder 구조 설계
+* Verilog HDL 구현
+* Testbench 작성
+* RTL View 및 waveform 기반 동작 검증
+
+---
+
+## Languages & Tools
+
+* C++
+* Verilog HDL
+* Digital Logic Design
+* Quartus
+* HDL Simulation
+* Markdown
+
+---
+
+## Repository Purpose
+
+이 저장소는 Digital Logic Circuit 1 과목에서 학습한 이론과 구현 과제를 정리하기 위한 학습 기록용 저장소이다.
+
+단순 문제 풀이뿐 아니라, Quine-McCluskey Algorithm의 C++ 구현과 40-bit Ripple Carry Adder의 Verilog HDL 구현을 통해 Digital Logic 이론을 실제 code와 circuit structure로 연결하는 데 중점을 두었다.
+
+---
+
+## Notice
+
+이 저장소는 학습 및 기록용이다.
+
+과제 제출 목적으로 code를 복사하거나 재사용하지 말아야 한다.
