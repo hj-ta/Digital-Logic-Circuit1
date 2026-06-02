@@ -9,16 +9,16 @@ Boolean Algebra, Sequential Logic, Quine-McCluskey Algorithm, Verilog HDL 기반
 ## 과제 목차
 
 * **HW01_Boolean_Algebra**
-  수 체계, 2의 보수, Boolean Algebra, CMOS Logic 기초 문제 풀이
+수 체계, 2의 보수, Boolean Algebra, CMOS Logic 기초 문제 풀이
 
 * **HW02_Quine_McCluskey**
-  C++ 기반 Quine-McCluskey Algorithm 구현
+C++ 기반 Quine-McCluskey Algorithm 구현
 
 * **HW03_Sequential_Logic**
-  Latch, Flip-Flop, FSM, Sequential Logic 분석
+Latch, Flip-Flop, FSM, Sequential Logic 분석
 
 * **HW04_Ripple_Carry_Adder**
-  Verilog HDL 기반 40-bit Ripple Carry Adder 구현
+Verilog HDL 기반 40-bit Ripple Carry Adder 구현
 
 ---
 
