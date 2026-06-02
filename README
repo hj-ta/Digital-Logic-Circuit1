@@ -2,172 +2,70 @@
 
 디지털논리회로1 과제와 실습 내용을 정리한 저장소이다.
 
- Boolean Algebra, Number System, Combinational Logic Circuit, Sequential Logic Circuit, FSM, Quine-McCluskey Algorithm, Verilog HDL 포함.
+Boolean Algebra, Sequential Logic, Quine-McCluskey Algorithm, Verilog HDL 기반 회로 구현을 다룬다.
 
 ---
 
-## Assignment Overview
+## 과제 목차
 
-* **HW01 - Boolean Algebra & Number Systems**
-  Boolean Algebra, Two's Complement, Overflow, CMOS Logic 등 디지털논리회로의 기본 개념관련 문제 풀이
+* **HW01_Boolean_Algebra**
+  수 체계, 2의 보수, Boolean Algebra, CMOS Logic 기초 문제 풀이
 
-* **HW02 - Quine-McCluskey Algorithm**
-  C++로 Quine-McCluskey Algorithm을 구현, Boolean Function Minimization 과정.
+* **HW02_Quine_McCluskey**
+  C++ 기반 Quine-McCluskey Algorithm 구현
 
-* **HW03 - Sequential Logic & FSM**
-  Latch, Flip-Flop, State Diagram, Moore/Mealy Machine 등 Sequential Logic Circuit과 FSM을 분석.
+* **HW03_Sequential_Logic**
+  Latch, Flip-Flop, FSM, Sequential Logic 분석
 
-* **HW04 - 40-bit Ripple Carry Adder**
-  Verilog HDL로 40-bit Ripple Carry Adder를 구현하고 Testbench와 waveform으로 검증.
-
----
-
-## Repository Structure
-
-```text
-Digital-Logic-Circuit1/
-├─ HW01_Boolean_Algebra/
-│  ├─ report.pdf
-│  └─ README.md
-│
-├─ HW02_Quine_McCluskey/
-│  ├─ main.cpp
-│  ├─ input_minterm.txt
-│  ├─ report.pdf
-│  └─ README.md
-│
-├─ HW03_Sequential_Logic/
-│  ├─ report.pdf
-│  └─ README.md
-│
-├─ HW04_Ripple_Carry_Adder/
-│  ├─ rca40.v
-│  ├─ tb_rca40.v
-│  ├─ report.pdf
-│  └─ README.md
-│
-└─ README.md
-```
+* **HW04_Ripple_Carry_Adder**
+  Verilog HDL 기반 40-bit Ripple Carry Adder 구현
 
 ---
 
-## HW01 - Boolean Algebra & Number Systems
+## HW01 - Boolean Algebra
 
-Boolean Algebra와 Number System을 중심으로 디지털논리회로의 기초 개념을 정리한 과제이다.
+디지털논리회로의 기초 개념을 다룬 과제이다.
 
-이 과제에서는 Boolean Function, Truth Table, Two's Complement, Hexadecimal Addition, Overflow, Boolean Equation Simplification 등을 다루었다. 또한 Majority Gate와 CMOS Logic을 분석하며 논리식을 실제 회로 구조로 해석하는 과정을 수행하였다.
-
-### Topics
-
-* Truth Table
-* Boolean Function
-* Two's Complement
-* Hexadecimal Addition
-* Overflow
-* Boolean Equation Simplification
-* Combinational Logic Circuit
-* Majority Gate
-* CMOS Logic
-* Inverter Logic Level
-* Noise Margin
-
-### Summary
-
-HW01은 디지털논리회로의 기본 수 표현 방식과 논리식 변환 과정을 정리한 기초 과제이다.
-이후 Combinational Logic Circuit과 Sequential Logic Circuit을 이해하기 위한 기반을 다루었다.
+Boolean Function, Truth Table, Two's Complement, Overflow, Boolean Equation Simplification, CMOS Logic 등을 정리하였다.
+수 체계와 논리식 변환, 기본 게이트 회로의 동작을 이해하는 데 초점을 두었다.
 
 ---
 
 ## HW02 - Quine-McCluskey Algorithm
 
-C++로 Quine-McCluskey Algorithm을 구현한 Boolean Function Minimization 과제이다.
+C++로 Quine-McCluskey Algorithm을 구현한 과제이다.
 
-Quine-McCluskey Algorithm은 Boolean Function을 체계적으로 최소화하기 위한 tabular method이다. 이 과제에서는 minterm을 입력받아 bit pattern 기준으로 grouping하고, single-bit difference를 가진 항들을 반복적으로 결합하여 Prime Implicant를 생성하는 과정을 구현하였다.
+Minterm을 입력받아 bit pattern 기준으로 grouping하고, single-bit difference를 가진 항들을 반복적으로 결합하여 Prime Implicant를 생성하였다.
+이후 coverage check를 통해 Essential Prime Implicant를 선택하는 방식으로 Boolean Function Minimization 과정을 구현하였다.
 
-### Topics
-
-* minterm input parsing
-* bit pattern grouping
-* single-bit difference detection
-* implicant merging
-* don't-care position 표현
-* Prime Implicant generation
-* coverage check
-* Essential Prime Implicant selection
-* 100-bit large input test
-
-### Implementation Structure
-
-`FileHandler`는 input/output 처리를 담당한다.
-
-`MintermProcessor`는 minterm processing, Prime Implicant generation, coverage check, minimization logic을 담당한다.
-
-### Summary
-
-HW02는 이 저장소에서 알고리즘 구현 성격이 가장 강한 과제이다.
-Boolean Function Minimization 이론을 C++ 코드로 구현하며, 디지털논리회로 이론을 알고리즘 문제로 확장해 다루었다.
+이 과제는 디지털논리회로 이론을 C++ 알고리즘으로 직접 구현했다는 점에서 가장 구현 중심적인 과제이다.
 
 ---
 
-## HW03 - Sequential Logic & FSM
+## HW03 - Sequential Logic
 
-Sequential Logic Circuit과 FSM을 중심으로 상태를 가지는 디지털 회로의 동작을 분석한 과제이다.
+Sequential Logic Circuit과 FSM을 분석한 과제이다.
 
-Sequential Logic Circuit은 현재 input뿐 아니라 이전 state에 따라 output이 결정되는 회로이다. 이 과제에서는 Latch, Flip-Flop, State Diagram, State Transition Table, Moore Machine, Mealy Machine 등을 통해 state 저장과 state transition 개념을 정리하였다.
-
-### Topics
-
-* SR Latch
-* Flip-Flop
-* State Diagram
-* State Transition Table
-* FSM
-* Moore Machine
-* Mealy Machine
-* Sequence Detector
-* Ring Counter
-
-### Summary
-
-HW03은 Combinational Logic Circuit에서 Sequential Logic Circuit으로 확장되는 핵심 개념을 다룬 과제이다.
-특히 state를 저장하고 전이하는 구조를 중심으로 디지털 회로가 시간 흐름에 따라 어떻게 동작하는지 분석하였다.
+Latch, Flip-Flop, State Diagram, State Transition Table, Moore Machine, Mealy Machine 등을 다루었다.
+현재 input뿐 아니라 이전 state에 따라 output이 결정되는 회로의 동작 방식을 정리하였다.
 
 ---
 
 ## HW04 - 40-bit Ripple Carry Adder
 
-Verilog HDL로 40-bit Ripple Carry Adder를 구현하고 Testbench로 검증한 과제이다.
+Verilog HDL로 40-bit Ripple Carry Adder를 구현한 과제이다.
 
-Ripple Carry Adder는 여러 개의 Full Adder를 직렬로 연결하여 multi-bit addition을 수행하는 구조이다. 각 bit의 Carry-out이 다음 bit의 Carry-in으로 전달되며, carry가 하위 bit에서 상위 bit로 순차적으로 전파된다.
-
-### Topics
-
-* Full Adder Truth Table
-* Sum / Carry-out Boolean Equation
-* 1-bit Full Adder module
-* 40-bit Ripple Carry Adder
-* Carry propagation structure
-* Verilog HDL implementation
-* Testbench
-* RTL View
-* waveform simulation
-
-### Summary
-
-HW04는 디지털 회로 이론을 Verilog HDL 코드로 구현한 과제이다.
-Full Adder의 Boolean Equation을 HDL module로 작성하고, 이를 40-bit 구조로 확장하여 hardware-level design과 simulation flow를 경험하였다.
+1-bit Full Adder를 기반으로 40-bit adder 구조를 만들고, Testbench와 waveform을 통해 Sum과 Cout의 동작을 검증하였다.
+Full Adder의 Boolean Equation을 HDL module로 구현하고, 이를 multi-bit addition 구조로 확장하였다.
 
 ---
 
-## Main Skills
+## 사용 기술 및 개념
 
 * Boolean Algebra
 * Number System
-* Two's Complement
-* Boolean Function
-* Boolean Function Minimization
-* Combinational Logic Circuit
-* Sequential Logic Circuit
+* Combinational Logic
+* Sequential Logic
 * FSM
 * Quine-McCluskey Algorithm
 * C++
@@ -180,6 +78,6 @@ Full Adder의 Boolean Equation을 HDL module로 작성하고, 이를 40-bit 구�
 
 ## Notice
 
-이 저장소는 학습 및 기록용이다.
+이 저장소는 학습 및 포트폴리오 기록용이다.
 
-과제 제출 목적으로 code를 복사하거나 재사용하지 말아주세요.
+과제 제출 목적으로 코드를 복사하거나 재사용하지 말아야 한다.
