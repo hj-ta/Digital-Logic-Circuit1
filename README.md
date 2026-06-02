@@ -1,6 +1,6 @@
 # Digital Logic Circuit 1
 
-디지털논리회로1 과제와 실습 내용을 정리한 저장소이다.
+[2024년 1학기] 광운대학교 컴퓨터정보공학과 디지털논리회로1 과제
 
 Boolean Algebra, Sequential Logic, Quine-McCluskey Algorithm, Verilog HDL 기반 회로 구현을 다룬다.
 
@@ -19,44 +19,6 @@ Latch, Flip-Flop, FSM, Sequential Logic 분석
 
 * **HW04_Ripple_Carry_Adder**
 Verilog HDL 기반 40-bit Ripple Carry Adder 구현
-
----
-
-## HW01 - Boolean Algebra
-
-디지털논리회로의 기초 개념을 다룬 과제이다.
-
-Boolean Function, Truth Table, Two's Complement, Overflow, Boolean Equation Simplification, CMOS Logic 등을 정리하였다.
-수 체계와 논리식 변환, 기본 게이트 회로의 동작을 이해하는 데 초점을 두었다.
-
----
-
-## HW02 - Quine-McCluskey Algorithm
-
-C++로 Quine-McCluskey Algorithm을 구현한 과제이다.
-
-Minterm을 입력받아 bit pattern 기준으로 grouping하고, single-bit difference를 가진 항들을 반복적으로 결합하여 Prime Implicant를 생성하였다.
-이후 coverage check를 통해 Essential Prime Implicant를 선택하는 방식으로 Boolean Function Minimization 과정을 구현하였다.
-
-이 과제는 디지털논리회로 이론을 C++ 알고리즘으로 직접 구현했다는 점에서 가장 구현 중심적인 과제이다.
-
----
-
-## HW03 - Sequential Logic
-
-Sequential Logic Circuit과 FSM을 분석한 과제이다.
-
-Latch, Flip-Flop, State Diagram, State Transition Table, Moore Machine, Mealy Machine 등을 다루었다.
-현재 input뿐 아니라 이전 state에 따라 output이 결정되는 회로의 동작 방식을 정리하였다.
-
----
-
-## HW04 - 40-bit Ripple Carry Adder
-
-Verilog HDL로 40-bit Ripple Carry Adder를 구현한 과제이다.
-
-1-bit Full Adder를 기반으로 40-bit adder 구조를 만들고, Testbench와 waveform을 통해 Sum과 Cout의 동작을 검증하였다.
-Full Adder의 Boolean Equation을 HDL module로 구현하고, 이를 multi-bit addition 구조로 확장하였다.
 
 ---
 
@@ -80,4 +42,4 @@ Full Adder의 Boolean Equation을 HDL module로 구현하고, 이를 multi-bit a
 
 이 저장소는 학습 및 포트폴리오 기록용이다.
 
-과제 제출 목적으로 코드를 복사하거나 재사용하지 말아야 한다.
+과제 제출 목적으로 코드를 복사하거나 재사용하지 말아야 주세요.
